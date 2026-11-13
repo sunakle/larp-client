@@ -21,3 +21,6 @@
 /source/build-file-manifest.json
 *.build.log
 *.build-errors.log
+/game/data/
+/game/natives/jna*.dll
+/game/natives/jna*.dll.x
