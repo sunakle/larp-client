@@ -1,0 +1,12 @@
+{
+  "filename": "Schizocraft-Resourcepack-1.16.5.zip",
+  "minecraft_version": "1.16.5",
+  "pack_format": 6,
+  "unique_resources": 4538,
+  "identical_duplicates_removed": 728,
+  "sha256": "4f2c3da8e3067361ba3cdc1d2d371bf1b681b5ec4c03842cd7301dbfa800cc7c",
+  "size_bytes": 81024861,
+  "game_tested": false,
+  "compatible_with_larp_1_21_11": false,
+  "source_jar_sha256": "4798ac399829af91c1742f803c3908a0d360c789c35b3a71a02c902bc0ade6f3"
+}

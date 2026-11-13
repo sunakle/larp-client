@@ -31,6 +31,16 @@
 
 В рабочий ресурспак объединены части 20 исходных пакетов. Дубли, альтернативные текстуры и 8 неподдерживаемых исходных пакетов в рабочий ZIP не включены. [Отчёт CSV](docs/resourcepacks/REPORT.csv), [полный отчёт JSON](docs/resourcepacks/REPORT.json). Загрузка пакета в Minecraft 1.21.11 с LARP проверена; отдельные эффекты во всём мире не тестировались.
 
+## Schizocraft — отдельный ресурспак 1.16.5
+
+**[Скачать Schizocraft Resourcepack ZIP, около 81 МБ](https://github.com/sunakle/larp-client/raw/refs/heads/main/downloads/resourcepacks/Schizocraft-Resourcepack-1.16.5.zip)**
+
+В одном ZIP объединены 4 538 ресурсов из Schizocraft 1.3b War and McNutt: модели, текстуры мобов, предметов и блоков, небо, броня, интерфейс, картины, звуки и эффекты. 728 точных дублей устранены. Файлы assets и pack.mcmeta лежат в корне: это один ресурспак, без вложенных ZIP.
+
+Это пакет в исходном формате **Minecraft 1.16.5**, без адаптации для LARP 1.21.11. Для использования в 1.16.5 положите ZIP в resourcepacks и включите его в настройках. Для новых объектов и особого неба Schizocraft нужен исходный Forge-мод; ресурспак не содержит Java-кода. Шейдерная часть — четыре JSON-эффекта постобработки, не отдельный shaderpack Iris/OptiFine.
+
+[Подробная инструкция](docs/resourcepacks/Schizocraft-1.16.5.txt) · [Проверка архива и SHA-256](docs/resourcepacks/Schizocraft-1.16.5-verification.json). Архив и соответствие исходным ресурсам проверены; запуск игры с объединённым ZIP не проверялся.
+
 ## Состав
 
 | Путь | Содержимое |
