@@ -1,0 +1,13 @@
+{
+  "fileCheck": "passed",
+  "bundledJava": "passed",
+  "assetObjectsChecked": 4593,
+  "assetSHA1": "passed",
+  "modBytecodeUnchanged": true,
+  "launcherBuild": "passed; warnings treated as errors",
+  "launcherPreview": "visually inspected",
+  "personalAccountsIncluded": false,
+  "privateGameDataIncluded": false,
+  "interactiveStartup": "not run after packaging full client",
+  "scope": "File checks, Java startup, asset SHA-1 validation; Minecraft gameplay and multiplayer not tested"
+}

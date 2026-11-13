@@ -1,17 +1,13 @@
 {
-  "csharpCompilation": "passed; warnings treated as errors",
-  "launcherRender": "visually inspected",
-  "installOnCopy": "passed",
-  "rollbackOnCopy": "passed; original SHA-256 restored",
-  "fileCheck": "passed on staged original game libraries",
-  "jarEntryCount": 1837,
-  "changedJarFiles": [
-    "assets/larp-client/icon.png",
-    "assets/larp-client/textures/gui/logo.png",
-    "assets/larp-client/textures/gui/logo-halloween.png"
-  ],
-  "classFilesChanged": 0,
-  "minecraftStartup": "not run",
-  "originalClientDirectory": "read only; not modified",
-  "githubInstaller": "Explicit -Target installation passed on test copy; folder picker not exercised"
+  "fileCheck": "passed",
+  "bundledJava": "passed",
+  "assetObjectsChecked": 4593,
+  "assetSHA1": "passed",
+  "modBytecodeUnchanged": true,
+  "launcherBuild": "passed; warnings treated as errors",
+  "launcherPreview": "visually inspected",
+  "personalAccountsIncluded": false,
+  "privateGameDataIncluded": false,
+  "interactiveStartup": "not run after packaging full client",
+  "scope": "File checks, Java startup, asset SHA-1 validation; Minecraft gameplay and multiplayer not tested"
 }
