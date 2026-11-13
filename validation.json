@@ -8,6 +8,13 @@
   "launcherPreview": "visually inspected",
   "personalAccountsIncluded": false,
   "privateGameDataIncluded": false,
-  "interactiveStartup": "not run after packaging full client",
-  "scope": "File checks, Java startup, asset SHA-1 validation; Minecraft gameplay and multiplayer not tested"
+  "scope": "Launcher tests, Java bridge tests, file checks and real-game local-skin startup. No multiplayer or worlds tested.",
+  "launcherChecks": 24,
+  "skinBridgeChecks": 11,
+  "skinBridgeCompilation": "passed",
+  "skinBridgeStartup": "passed; real game title screen loaded; Skin Changer reported launcher.png applied",
+  "gameExitCode": 0,
+  "buttonVisualCheck": "normal and disabled/focused states inspected",
+  "gameScreenshot": "unavailable due to desktop capture failure; game log used for integration check",
+  "multiplayerSkinSync": "not tested on a live server; requires SkinsRestorer /skin command and permission"
 }

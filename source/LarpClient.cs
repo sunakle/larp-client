@@ -42,9 +42,10 @@ internal static class Client
         try
         {
             if(args.Length == 2 && args[0] == "--export-assets") { Brand.ExportAssets(args[1]); return 0; }
-            if(args.Length == 2 && args[0] == "--preview") {
+            if(args.Length == 2 && (args[0] == "--preview" || args[0] == "--preview-disabled" || args[0] == "--preview-skin")) {
                 Application.EnableVisualStyles(); Application.SetCompatibleTextRenderingDefault(false);
-                using(var preview=new LauncherForm(new LaunchConfig {title="LARP Client",version="1.21.11"},null,4096)) {
+                using(Form preview=args[0]=="--preview-skin" ? (Form)new SkinDialog() : new LauncherForm(new LaunchConfig {title="LARP Client",version="1.21.11"},null,4096)) {
+                    if(args[0]=="--preview-disabled")((LauncherForm)preview).PreviewPlaying();
                     preview.ShowInTaskbar=false; preview.StartPosition=FormStartPosition.Manual; preview.Location=new Point(-30000,-30000); preview.Show(); Application.DoEvents();
                     using(var image=new Bitmap(preview.Width,preview.Height)) {preview.DrawToBitmap(image,new Rectangle(Point.Empty,image.Size));using(var clientImage=image.Clone(new Rectangle(preview.PointToScreen(Point.Empty).X-preview.Left,preview.PointToScreen(Point.Empty).Y-preview.Top,preview.ClientSize.Width,preview.ClientSize.Height),System.Drawing.Imaging.PixelFormat.Format32bppArgb)) clientImage.Save(args[1],System.Drawing.Imaging.ImageFormat.Png);}
                 } return 0;
@@ -148,7 +149,11 @@ internal sealed class LauncherForm : Form
     private readonly LaunchConfig config;
     private readonly TextBox username;
     private readonly NumericUpDown memory;
-    private readonly Button start;
+    private readonly ModernButton start;
+    private readonly ModernButton skinButton;
+    private readonly SkinPreview skinPreview;
+    private readonly Label memoryInfo;
+    private readonly System.Windows.Forms.Timer memoryTimer;
     private readonly Label status;
     private readonly string autoName;
     private readonly int autoMemory;
@@ -181,8 +186,11 @@ internal sealed class LauncherForm : Form
         Controls.Add(new BrandView { Left=36,Top=30,Width=30,Height=34,TabStop=false });
         AddLabel("L A R P",78,32,200,30,13,ForeColor).Font=new Font("Segoe UI Semibold",13);
         AddLabel("CLIENT",78,61,160,20,8,Brand.Muted);
-        Controls.Add(new BrandView { Left=65,Top=145,Width=206,Height=232,TabStop=false });
-        AddLabel("Твой мир. Твои правила.",36,422,270,32,14,ForeColor);
+        skinPreview = new SkinPreview { Left=46,Top=120,Width=240,Height=285,TabStop=false };
+        skinPreview.Reload(); Controls.Add(skinPreview);
+        skinButton = new ModernButton { Text="Скин и серверы",Left=36,Top=422,Width=260,Height=40,Font=new Font("Segoe UI",10),TabIndex=4 };
+        skinButton.Click += delegate { using(var dialog=new SkinDialog()) { dialog.ShowDialog(this); skinPreview.Reload(); } };
+        Controls.Add(skinButton);
         AddLabel("Minecraft "+config.version+"  /  Fabric",36,461,270,24,10,Brand.Muted);
         AddLabel("LARP  /  ЛОКАЛЬНЫЙ ПРОФИЛЬ",36,542,280,22,8,Brand.Muted);
         AddLabel("ЛАУНЧЕР",380,35,260,24,9,Brand.Accent);
@@ -193,13 +201,16 @@ internal sealed class LauncherForm : Form
         Controls.Add(new FieldPanel(username){Left=380,Top=227,Width=484,Height=54,TabIndex=0});
         AddLabel("3–16 символов: латиница, цифры и _",380,289,484,22,9,Brand.Muted);
         AddLabel("Оперативная память",380,333,260,24,10,ForeColor);
-        memory = new NumericUpDown {Left=16,Top=14,Width=108,Minimum=2,Maximum=12,Value=4,Font=new Font("Segoe UI",12),BackColor=Brand.Surface,ForeColor=ForeColor,BorderStyle=BorderStyle.None,TabIndex=1,AccessibleName="Память в гигабайтах"};
+        memory = new NumericUpDown {Left=16,Top=14,Width=108,Minimum=2,Maximum=MemoryBudget.MaximumGb,Value=Math.Min(4,MemoryBudget.MaximumGb),Font=new Font("Segoe UI",12),BackColor=Brand.Surface,ForeColor=ForeColor,BorderStyle=BorderStyle.None,TabIndex=1,AccessibleName="Память в гигабайтах"};
         Controls.Add(new FieldPanel(memory){Left=380,Top=367,Width=140,Height=52,TabIndex=1});
-        AddLabel("ГБ  /  от 2 до 12",540,380,285,24,10,Brand.Muted);
+        memoryInfo = AddLabel("",540,371,324,48,9,Brand.Muted);
+        memoryTimer = new System.Windows.Forms.Timer { Interval=2500 };
+        memoryTimer.Tick += delegate { UpdateMemoryInfo(); }; memoryTimer.Start(); UpdateMemoryInfo();
+        FormClosed += delegate { memoryTimer.Dispose(); };
         start = new ModernButton {Primary=true,Text="ИГРАТЬ  →",Left=380,Top=449,Width=304,Height=56,Font=new Font("Segoe UI Semibold",12),TabIndex=2};
         start.Click += delegate { StartGame(username.Text.Trim(), Decimal.ToInt32(memory.Value) * 1024); };
         Controls.Add(start);
-        Button folder = new ModernButton {Text="Папка игры",Left=696,Top=449,Width=168,Height=56,Font=new Font("Segoe UI",10),TabIndex=3};
+        ModernButton folder = new ModernButton {Text="Папка игры",Left=696,Top=449,Width=168,Height=56,Font=new Font("Segoe UI",10),TabIndex=3};
         folder.Click += delegate {try {Process.Start(new ProcessStartInfo("explorer.exe","\""+Client.LocalPath("game")+"\""){UseShellExecute=true});}catch(Exception error){status.Text=error.Message;}};
         Controls.Add(folder);
         status = AddLabel("Готов к запуску",380,519,484,26,9,Brand.Accent);
@@ -245,9 +256,20 @@ internal sealed class LauncherForm : Form
         return label;
     }
 
+    internal void PreviewPlaying(){start.Enabled=false;username.Enabled=false;memory.Enabled=false;skinButton.Enabled=false;status.Text="Игра запущена. Ожидаем закрытия Minecraft…";}
+
+    private void UpdateMemoryInfo()
+    {
+        MemoryBudget.Snapshot info=MemoryBudget.Read();
+        memoryInfo.Text=info.TotalMb>0
+            ? "ОЗУ: "+Math.Ceiling(info.TotalMb/1024d)+" ГБ • свободно: "+(info.AvailableMb/1024d).ToString("0.0")+" ГБ\nРекомендуется: "+MemoryBudget.RecommendedGb+" ГБ • до "+MemoryBudget.MaximumGb+" ГБ"
+            : "ОЗУ не определена\nВыберите от 2 до "+MemoryBudget.MaximumGb+" ГБ";
+    }
+
     private void ReadSettings()
     {
         username.Text = "Player";
+        memory.Value = MemoryBudget.RecommendedGb;
         string path = Client.LocalPath("client-settings.json");
         if (!File.Exists(path)) return;
         try
@@ -256,7 +278,7 @@ internal sealed class LauncherForm : Form
             if (settings != null)
             {
                 if (Regex.IsMatch(settings.username ?? "", "^[A-Za-z0-9_]{3,16}$")) username.Text = settings.username;
-                if (settings.memoryMb >= 2048 && settings.memoryMb <= 12288) memory.Value = Math.Max(2, Math.Min(12, settings.memoryMb / 1024));
+                if (settings.memoryMb >= 2048) memory.Value = Math.Max(2, Math.Min(MemoryBudget.MaximumGb, settings.memoryMb / 1024));
             }
         }
         catch { status.Text = "Настройки сброшены. Укажите имя игрока."; }
@@ -268,7 +290,7 @@ internal sealed class LauncherForm : Form
         try
         {
             if (!Regex.IsMatch(name, "^[A-Za-z0-9_]{3,16}$")) throw new InvalidDataException("Имя: 3–16 латинских букв, цифр или символов _.");
-            if (memoryMb < 2048 || memoryMb > 12288) throw new InvalidDataException("Память: от 2048 до 12288 МиБ.");
+            if (memoryMb < 2048 || memoryMb > MemoryBudget.MaximumGb * 1024) throw new InvalidDataException("Память: от 2 до " + MemoryBudget.MaximumGb + " ГБ на этом ПК.");
             Client.Validate(config);
             string mutexName;
             using (MD5 md5 = MD5.Create()) mutexName = "Local\\LarpClient-" + BitConverter.ToString(md5.ComputeHash(Encoding.UTF8.GetBytes(Client.Root.ToLowerInvariant()))).Replace("-", "");
@@ -326,6 +348,7 @@ internal sealed class LauncherForm : Form
             start.Enabled = false;
             username.Enabled = false;
             memory.Enabled = false;
+            skinButton.Enabled = false;
             status.Text = "Игра запущена. Ожидаем закрытия Minecraft…";
             WindowState = FormWindowState.Minimized;
             ThreadPool.QueueUserWorkItem(delegate
@@ -371,6 +394,7 @@ internal sealed class LauncherForm : Form
         start.Enabled = true;
         username.Enabled = true;
         memory.Enabled = true;
+        skinButton.Enabled = true;
         status.Text = exitCode == 0 ? "Игра закрыта. Можно запустить снова." : "Игра завершилась с ошибкой. Журнал: " + Path.GetFileName(logPath);
         if (autoName != null || hiddenWhilePlaying) { Close(); return; }
         WindowState = FormWindowState.Normal;
@@ -445,19 +469,40 @@ internal sealed class BrandView : Control
     internal BrandView(){SetStyle(ControlStyles.UserPaint|ControlStyles.AllPaintingInWmPaint|ControlStyles.OptimizedDoubleBuffer,true);BackColor=Brand.Background;}
     protected override void OnPaint(PaintEventArgs e){Brand.Logo(e.Graphics,ClientRectangle,Color.White);}
 }
-internal sealed class ModernButton : Button
+internal sealed class ModernButton : Control, IButtonControl
 {
-    internal bool Primary; private bool hovered;
-    internal ModernButton(){FlatStyle=FlatStyle.Flat;FlatAppearance.BorderSize=0;Cursor=Cursors.Hand;SetStyle(ControlStyles.UserPaint|ControlStyles.OptimizedDoubleBuffer|ControlStyles.AllPaintingInWmPaint,true);}
+    internal bool Primary;
+    private bool hovered, pressed, isDefault;
+    public DialogResult DialogResult { get; set; }
+    internal ModernButton()
+    {
+        SetStyle(ControlStyles.UserPaint|ControlStyles.AllPaintingInWmPaint|ControlStyles.OptimizedDoubleBuffer|ControlStyles.ResizeRedraw|ControlStyles.Selectable|ControlStyles.StandardClick,true);
+        BackColor=Brand.Background; ForeColor=Color.White; Cursor=Cursors.Hand; TabStop=true; AccessibleRole=AccessibleRole.PushButton;
+    }
+    public void NotifyDefault(bool value){isDefault=value;Invalidate();}
+    public void PerformClick(){if(Enabled && Visible) OnClick(EventArgs.Empty);}
+    protected override void OnClick(EventArgs e){base.OnClick(e);if(DialogResult!=DialogResult.None && FindForm()!=null)FindForm().DialogResult=DialogResult;}
+    protected override bool IsInputKey(Keys keyData){return keyData==Keys.Space || base.IsInputKey(keyData);}
+    protected override void OnKeyDown(KeyEventArgs e){if(e.KeyCode==Keys.Space){pressed=true;Invalidate();e.Handled=true;}base.OnKeyDown(e);}
+    protected override void OnKeyUp(KeyEventArgs e){if(e.KeyCode==Keys.Space){bool click=pressed;pressed=false;Invalidate();if(click)PerformClick();e.Handled=true;}base.OnKeyUp(e);}
     protected override void OnMouseEnter(EventArgs e){hovered=true;Invalidate();base.OnMouseEnter(e);}
-    protected override void OnMouseLeave(EventArgs e){hovered=false;Invalidate();base.OnMouseLeave(e);}
-    protected override void OnPaint(PaintEventArgs e){
+    protected override void OnMouseLeave(EventArgs e){hovered=false;pressed=false;Invalidate();base.OnMouseLeave(e);}
+    protected override void OnMouseDown(MouseEventArgs e){if(e.Button==MouseButtons.Left){pressed=true;Focus();Invalidate();}base.OnMouseDown(e);}
+    protected override void OnMouseUp(MouseEventArgs e){pressed=false;Invalidate();base.OnMouseUp(e);}
+    protected override void OnGotFocus(EventArgs e){Invalidate();base.OnGotFocus(e);}
+    protected override void OnLostFocus(EventArgs e){pressed=false;Invalidate();base.OnLostFocus(e);}
+    protected override void OnEnabledChanged(EventArgs e){pressed=false;hovered=false;Invalidate();base.OnEnabledChanged(e);}
+    protected override void OnPaintBackground(PaintEventArgs e){e.Graphics.Clear(Parent==null?BackColor:Parent.BackColor);}
+    protected override void OnPaint(PaintEventArgs e)
+    {
         e.Graphics.SmoothingMode=System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
         Color fill=Primary?(hovered?Color.FromArgb(177,250,217):Brand.Accent):(hovered?Color.FromArgb(42,49,59):Brand.Surface);
-        if(!Enabled) fill=Color.FromArgb(45,58,54);
-        using(var p=Brand.Round(new RectangleF(1,1,Width-3,Height-3),12)) using(var b=new SolidBrush(fill)) e.Graphics.FillPath(b,p);
-        TextRenderer.DrawText(e.Graphics,Text,Font,ClientRectangle,Enabled?(Primary?Color.FromArgb(14,31,24):Color.White):Brand.Muted,TextFormatFlags.HorizontalCenter|TextFormatFlags.VerticalCenter);
-        if(Focused) using(var p=Brand.Round(new RectangleF(5,5,Width-11,Height-11),9)) using(var pen=new Pen(Primary?Color.FromArgb(30,88,64):Brand.Accent)) {pen.DashStyle=System.Drawing.Drawing2D.DashStyle.Dot;e.Graphics.DrawPath(pen,p);}
+        if(pressed) fill=Primary?Color.FromArgb(115,210,168):Color.FromArgb(50,59,70);
+        if(!Enabled)fill=Color.FromArgb(43,57,51);
+        using(var p=Brand.Round(new RectangleF(1,1,Width-3,Height-3),12))using(var b=new SolidBrush(fill))e.Graphics.FillPath(b,p);
+        TextRenderer.DrawText(e.Graphics,Text,Font,ClientRectangle,Enabled?(Primary?Color.FromArgb(14,31,24):Color.White):Brand.Muted,TextFormatFlags.HorizontalCenter|TextFormatFlags.VerticalCenter|TextFormatFlags.EndEllipsis);
+        if(Enabled && Focused)using(var p=Brand.Round(new RectangleF(4,4,Width-9,Height-9),9))using(var pen=new Pen(Primary?Color.FromArgb(48,108,79):Brand.Accent))e.Graphics.DrawPath(pen,p);
+        else if(Enabled && isDefault && !Primary)using(var p=Brand.Round(new RectangleF(1,1,Width-3,Height-3),12))using(var pen=new Pen(Brand.Accent))e.Graphics.DrawPath(pen,p);
     }
 }
 internal sealed class FieldPanel : Panel

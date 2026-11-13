@@ -10,7 +10,7 @@ The executable reads `launch-config.json` beside itself. All configured Java and
 
 The launcher creates a **local profile** from a nickname and its standard Java offline UUID. It does not import accounts or tokens and does not provide Microsoft sign-in. Servers requiring an authenticated Microsoft/Minecraft session need a separate sign-in implementation. The packaged mods are not changed by the launcher.
 
-Normal usage is to run `LARP Client.exe`, enter a nickname of 3–16 ASCII letters/digits/underscores, select 2–12 GiB of RAM, and click Play. Only nickname and memory are saved in `client-settings.json`. Closing the launcher window while Minecraft runs hides the launcher until Minecraft exits so redirected logs continue working; Minecraft is never killed by closing the window. A named mutex prevents two copies of this same client folder from launching simultaneously.
+Normal usage is to run `LARP Client.exe`, enter a nickname of 3–16 ASCII letters/digits/underscores, select RAM within the detected physical-memory budget, and click Play. Only nickname and memory are saved in `client-settings.json`. Closing the launcher window while Minecraft runs hides the launcher until Minecraft exits so redirected logs continue working; Minecraft is never killed by closing the window. A named mutex prevents two copies of this same client folder from launching simultaneously.
 
 Automated checks and launch:
 
@@ -25,3 +25,6 @@ The child process removes inherited `_JAVA_OPTIONS`, `JAVA_TOOL_OPTIONS`, `JDK_J
 
 ## Updated appearance
 Graphite layout, vector logo, embedded multi-resolution icon and system DPI manifest. The build script exports the icon automatically if needed. `--export-assets DIR` exports PNGs and ICO; `--preview FILE.png` renders the launcher without Java. Install.ps1 backs up changed files and replaces three branding PNGs in the mod; bytecode is not edited.
+
+
+LauncherFeatures.cs implements physical RAM detection, PNG validation, preview and persisted skin preferences. Skin Bridge source and build script are in skin-bridge/. It configures the existing LARP Skin Changer and optionally requests /skin on servers advertising that command. No accounts, tokens or local skins are published. Run tests/run.ps1 for the launcher checks.

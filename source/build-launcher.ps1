@@ -3,7 +3,7 @@ $ErrorActionPreference='Stop'
 $compilerPath=Join-Path ([System.Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory()) 'csc.exe'
 $absoluteOutput=[IO.Path]::GetFullPath($OutputPath)
 New-Item -ItemType Directory -Path ([IO.Path]::GetDirectoryName($absoluteOutput)) -Force|Out-Null
-$compileArgs=@('/nologo','/warnaserror','/codepage:65001','/target:winexe','/platform:x64','/optimize+','/reference:System.Windows.Forms.dll','/reference:System.Drawing.dll','/reference:System.Web.Extensions.dll',('/win32manifest:'+(Join-Path $PSScriptRoot 'app.manifest')),('/out:'+$absoluteOutput),(Join-Path $PSScriptRoot 'LarpClient.cs'))
+$compileArgs=@('/nologo','/warnaserror','/codepage:65001','/target:winexe','/platform:x64','/optimize+','/reference:System.Windows.Forms.dll','/reference:System.Drawing.dll','/reference:System.Web.Extensions.dll',('/win32manifest:'+(Join-Path $PSScriptRoot 'app.manifest')),('/out:'+$absoluteOutput),(Join-Path $PSScriptRoot 'LarpClient.cs'),(Join-Path $PSScriptRoot 'LauncherFeatures.cs'))
 function Invoke-Compiler([string[]]$compilerArguments){
  $argumentLine=($compilerArguments|ForEach-Object{'"'+$_+'"'}) -join ' '
  $outputLog=$absoluteOutput+'.build.log';$errorLog=$absoluteOutput+'.build-errors.log'

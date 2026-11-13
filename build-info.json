@@ -1,20 +1,31 @@
 {
-    "minecraft":  "1.21.11",
-    "fabricLoader":  "0.20.1",
-    "platform":  "windows-x64",
-    "mods":  [
-                 {
-                     "file":  "fabric-api-0.141.6+1.21.11.jar",
-                     "sha256":  "bdff7fd7e220085cfad2ff9b1f40dde6534ae0b96cf378f97a374bc54cb9ed0f"
-                 },
-                 {
-                     "file":  "LARP-CRACKED-BY-MITTKEE.jar",
-                     "sha256":  "ef598f2cf4c2f6ada0fde8568e483cd5176864c5c0aab253a1d70a20b93ce0f5"
-                 }
-             ],
-    "clientJarSha1":  "ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd",
-    "assetIndex":  "29",
-    "assetObjectCount":  4593,
-    "totalCopiedBytes":  676955570,
-    "copiedFileCount":  5072
+  "minecraft": "1.21.11",
+  "fabricLoader": "0.20.1",
+  "platform": "windows-x64",
+  "mods": [
+    {
+      "file": "fabric-api-0.141.6+1.21.11.jar",
+      "sha256": "bdff7fd7e220085cfad2ff9b1f40dde6534ae0b96cf378f97a374bc54cb9ed0f"
+    },
+    {
+      "file": "LARP-CRACKED-BY-MITTKEE.jar",
+      "sha256": "ef598f2cf4c2f6ada0fde8568e483cd5176864c5c0aab253a1d70a20b93ce0f5"
+    },
+    {
+      "file": "LarpSkinBridge-1.0.0.jar",
+      "sha256": "8f692a1db8d4841b1d85065ad03228665884167819e57c8efa56b08ed1ac2997"
+    }
+  ],
+  "clientJarSha1": "ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd",
+  "assetIndex": "29",
+  "assetObjectCount": 4593,
+  "totalCopiedBytes": 676955570,
+  "copiedFileCount": 5072,
+  "launcherFeatures": [
+    "Physical RAM detection and available-memory indicator",
+    "Rounded custom buttons without native Button overpainting",
+    "Local PNG skin chooser and preview",
+    "LARP Skin Changer integration",
+    "Opt-in SkinsRestorer command sync"
+  ]
 }

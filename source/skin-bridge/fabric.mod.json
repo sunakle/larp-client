@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "larp-launcher-skin-bridge",
+  "version": "1.0.0",
+  "name": "LARP Launcher Skin Bridge",
+  "description": "Applies explicit launcher skin selections to LARP Skin Changer and optionally requests server-side skins on compatible servers.",
+  "authors": [
+    "sunakle"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.sunakle.larpbridge.SkinBridge"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*",
+    "larp-client": "2.2.6"
+  }
+}
