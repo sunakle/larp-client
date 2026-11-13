@@ -16,6 +16,21 @@
 
 Требования: Windows x64, .NET Framework 4.x, память для выбранного объёма Java и работы Windows. Лаунчер определяет физическую ОЗУ, показывает свободную память и позволяет выбрать от 2 ГБ до объёма ОЗУ за вычетом 2 ГБ для Windows; фиксированного потолка 12 ГБ нет. Встроенная Java используется независимо от системной.
 
+## Ресурспак и конфиг larp-config
+
+Оба файла уже входят в полный ZIP клиента. Можно скачать их отдельно:
+
+| Файл | Ссылка |
+| --- | --- |
+| Совместимый ресурспак 1.21.11, около 72 МБ | [Скачать ZIP](https://github.com/sunakle/larp-client/raw/refs/heads/main/game/resourcepacks/LARP-Resourcepack-1.21.11.zip) |
+| Конфиг larp-config.json | [Открыть / сохранить JSON](https://github.com/sunakle/larp-client/raw/refs/heads/main/game/config/larp-client/profiles/larp-config.json) |
+
+Ресурспак лежит в game/resourcepacks. В настройках ресурсов Minecraft включите **LARP-Resourcepack-1.21.11.zip**; оставьте активным только его и стандартные ресурсы. ZIP самого пакета распаковывать не нужно.
+
+Конфиг лежит в game/config/larp-client/profiles/larp-config.json. В менеджере конфигов LARP выберите **larp-config** и примените его. Share-код не нужен. Пресет содержит настройки 143 модулей, 30 из них включены; он не применяется автоматически при скачивании.
+
+В рабочий ресурспак объединены части 20 исходных пакетов. Дубли, альтернативные текстуры и 8 неподдерживаемых исходных пакетов в рабочий ZIP не включены. [Отчёт CSV](docs/resourcepacks/REPORT.csv), [полный отчёт JSON](docs/resourcepacks/REPORT.json). Загрузка пакета в Minecraft 1.21.11 с LARP проверена; отдельные эффекты во всём мире не тестировались.
+
 ## Состав
 
 | Путь | Содержимое |
@@ -26,6 +41,8 @@
 | game/libraries | Fabric Loader и игровые библиотеки |
 | game/mods | LARP Client 2.2.6 и Fabric API |
 | game/assets | Индекс и объекты игровых ресурсов |
+| game/resourcepacks | Совместимый объединённый ресурспак |
+| game/config/larp-client/profiles | Общий пресет larp-config.json |
 | game/natives | Нативные библиотеки Windows |
 | runtime | Полная встроенная Java 21 |
 | assets | Логотип и значки приложения |

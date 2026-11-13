@@ -24,3 +24,12 @@
 /game/data/
 /game/natives/jna*.dll
 /game/natives/jna*.dll.x
+
+# Published resource pack and explicitly shared profile
+!/game/resourcepacks/LARP-Resourcepack-1.21.11.zip
+!/game/config/larp-client/
+/game/config/larp-client/*
+!/game/config/larp-client/profiles/
+/game/config/larp-client/profiles/*
+!/game/config/larp-client/profiles/larp-config.json
+/game/usercache.json

@@ -1,0 +1,29 @@
+﻿Исходный пакет,Результат,Ресурсов в рабочем наборе,Изменения / причина исключения
+Red Chest.zip,adapted,7,Обычные/эндер-сундуки сохранены; три trapped-текстуры далее заменяются New Trapped Chest для различимости.
+shiny-diamonds.zip,adapted,2,Ресурсы сверены с текущими путями Minecraft; служебные файлы и устаревшая метаинформация удалены.
+shorterswords.zip,adapted,6,Ресурсы сверены с текущими путями Minecraft; служебные файлы и устаревшая метаинформация удалены.
+White Enderman1.16.2-1.16.5.zip,adapted,2,Ресурсы сверены с текущими путями Minecraft; служебные файлы и устаревшая метаинформация удалены.
+§d§l Visible Pearl.zip,adapted,1,"Модель item/generated совместима с актуальным item model definition, заменены только display-трансформации."
+alternative-totem.zip,excluded,0,Другой вариант той же текстуры тотема. В наборе выбран Old Totem с более новым исходным pack_format 46.
+Black Bow.zip,adapted,4,Ресурсы сверены с текущими путями Minecraft; служебные файлы и устаревшая метаинформация удалены.
+blackpillows-1.0.0-resourcepack-1.21.4.zip,adapted,16,"Оставлены 16 текстур кроватей. Удалены лишние gpu_warnlist, atlas beds и blue_bed item definition, чтобы не переопределять актуальные настройки игры."
+cubic-sun-moon-v1.8.5.zip,adapted,9,Сохранены современные celestial sun/moon; удалены старые атласы и ресурсы отсутствующих космических модов.
+Default-Dark-Mode-1.16-2023.7.0.zip,adapted,349,"Пересобраны 232 GUI-текстур на геометрии 1.21.11 с палитрой исходного пакета (0.4); обновлены 117 языковых файлов. Старые GUI-листы, шрифты и модовые интерфейсы не перенесены."
+elytra_black-1.0.1-mc1.16.5.zip,adapted,3,Переименованы сломанные элитры и текстура надетых крыльев.
+generated.zip,excluded,0,"Повреждённые ZIP-заголовки; серверные модели/CIT, старые core shaders и font/default. Нельзя надёжно перенести без исходного сервера и зависимостей."
+Glowing Animated Ores[N6][1.16.0-1.16.5].zip,excluded,0,Основной эффект требует OptiFine emissive textures; его нет в составе Fabric/LARP. Для руд выбран OreHighlighter.
+HexaBiome-{Basic}[3.0][1.16.0-1.16.5].zip,adapted,12,Сохранены стандартные текстуры бамбука и biome-colormaps; OptiFine/PBR-карты удалены; зависимые текстуры моделей бамбука сохранены.
+keion discs.zip,adapted,19,Перенесены 19 композиций; Creator/Creator Music Box/Relic/Precipice получили актуальные lowercase resource IDs.
+LowOnFire_1.16.zip,adapted,11,Ресурсы сверены с текущими путями Minecraft; служебные файлы и устаревшая метаинформация удалены.
+MelodysBloodRedXPV2.zip,excluded,0,Красный цвет XP зависит от OptiFine colormap/emissive. Без этих зависимостей ожидаемый эффект не сохраняется.
+milddle_finger_totem-1.0.0 (1).zip,excluded,0,Ещё один вариант тотема; пересекается с выбранным Old Totem.
+Minimal_HUD-v0.0.2.zip,adapted,87,"Сохранены современные HUD-спрайты, hotbar_selection приведён к 24×23, bars.png разделён на отдельные boss-bar sprites; мёртвые icons.png/widgets.png удалены."
+Mugget's Clearer Water v1.4.0.zip,adapted,6,Ресурсы сверены с текущими путями Minecraft; служебные файлы и устаревшая метаинформация удалены.
+New Trapped Chest 1.16.2-1.16.5.zip,adapted,3,Выбран отдельный внешний вид trapped chest; перекрытия с Red Chest разрешены в пользу этого пакета.
+Old Totem.zip,adapted,1,Единственный выбранный вариант тотема.
+OreHighlighter-1.0.2.zip,adapted,20,Ресурсы сверены с текущими путями Minecraft; служебные файлы и устаревшая метаинформация удалены.
+pink pearl (1).zip,excluded,0,Побайтный дубль pink pearl.zip; выбран другой вариант жемчуга.
+pink pearl.zip,excluded,0,Другой цвет жемчуга. Выбран purplePearls; исходная метаинформация Pink Pearl также содержит некорректный JSON.
+purplePearls_v1.0.zip,adapted,1,Единственный выбранный цвет жемчуга; сочетается с отдельной увеличенной моделью Visible Pearl.
+PvPSounds.zip,adapted,55,Звуки атак перенесены mob/player → entity/player; клик привязан к актуальному click_stereo. Остальные эффекты сверены с индексом ресурсов 1.21.11.
+Rainbow_Shields_(1.16.2).zip,excluded,0,Система щитов основана на OptiFine CIT и переименовании предметов. В текущем составе клиента CIT не поддерживается.

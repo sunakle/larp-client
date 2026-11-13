@@ -1,0 +1,2414 @@
+{
+  "schema": 2,
+  "ui": {
+    "category": "MISC",
+    "clickGui": {
+      "page": "Configs",
+      "module": "",
+      "query": "",
+      "moduleScroll": 0,
+      "settingScroll": 0
+    },
+    "accent": -12877066,
+    "secondary": -7928833,
+    "bloom": "Medium",
+    "blur": "Medium",
+    "bloomIntensity": 0.55,
+    "bloomRadius": 1.0,
+    "hud": {
+      "target": [
+        0.010869565217391304,
+        0.08547008547008547
+      ],
+      "inventory": [
+        0.01019108280254777,
+        0.2631578947368421
+      ],
+      "keybinds": [
+        0.00963855421686747,
+        0.5
+      ],
+      "radar": [
+        0.9893992932862191,
+        0.018648018648018648
+      ],
+      "staffs": [
+        0.9824561403508771,
+        0.2570281124497992
+      ],
+      "cooldowns": [
+        0.9836065573770492,
+        0.4686868686868687
+      ],
+      "speed": [
+        0.9801633605600933,
+        0.35412474849094566
+      ],
+      "effects": [
+        0.009216589861751152,
+        0.6815415821501014
+      ],
+      "info": [
+        0.2532239155920281,
+        0.026615969581749048
+      ]
+    },
+    "hudStyles": {
+      "modules": {
+        "scale": 0.7,
+        "hidden": true
+      },
+      "notifications": {
+        "scale": 1.0,
+        "hidden": true
+      },
+      "radar": {
+        "scale": 1.318452380952381,
+        "hidden": false
+      },
+      "inventory": {
+        "scale": 0.7,
+        "hidden": false
+      },
+      "staffs": {
+        "scale": 0.6221383341451534,
+        "hidden": false
+      },
+      "cooldowns": {
+        "scale": 0.6296915895755508,
+        "hidden": false
+      },
+      "speed": {
+        "scale": 0.6010436371511328,
+        "hidden": false
+      },
+      "effects": {
+        "scale": 0.5,
+        "hidden": false
+      },
+      "keybinds": {
+        "scale": 0.7086570283922662,
+        "hidden": false
+      },
+      "info": {
+        "scale": 0.5283976146965471,
+        "hidden": false
+      }
+    },
+    "hudEditor": {
+      "x": 1.0,
+      "y": 0.05,
+      "collapsed": false,
+      "snapping": true,
+      "grid": false
+    }
+  },
+  "modules": {
+    "Aura": {
+      "enabled": false,
+      "keybind": 82,
+      "settings": {
+        "Activation": "Toggle",
+        "Rotation": "Matrix",
+        "Aura Mode": "Blatant",
+        "Combat Version": "1.9",
+        "Attack Range": 6.0,
+        "Aim Range": 9.0,
+        "FOV": 360.0,
+        "Players": true,
+        "Mobs": true,
+        "Animals": false,
+        "Invisibles": true,
+        "Naked Players": true,
+        "Criticals": "Adaptive",
+        "Aim Point": "Multipoint",
+        "Predict": true,
+        "Predict Value": 4.0,
+        "Reach Buffer": 1.0,
+        "Rotation ETA": true,
+        "Entity Raycast": true,
+        "Dynamic Safe Reach": true,
+        "Predict Criticals": true,
+        "Randomize Timing": true,
+        "Sprint Mode": "Legit",
+        "Through Walls": false,
+        "Wall Bypass": false,
+        "Shield Breaker": true,
+        "Shield Unpress": false,
+        "Raycast": true,
+        "TPS Sync": true,
+        "Eating": false,
+        "Breaking": false,
+        "Placing": false,
+        "In Inventory": false,
+        "In Lava": false,
+        "In Web": false,
+        "In Water": false,
+        "Movement Reference": "Target",
+        "Move Fix": "Silent",
+        "Min CPS": 8.0,
+        "Max CPS": 11.0,
+        "Auto Jump": true,
+        "Smart Aim Visibility": true,
+        "Focus Target": true,
+        "Sort Mode": "Distance",
+        "Deliberate Miss": false,
+        "Miss Threshold": 28.0,
+        "FOV Cone": true,
+        "Indicator Width": 3.5,
+        "Visible Lines": false,
+        "Hit Zone": true,
+        "Zone Width": 2.0,
+        "Zone Opacity": 0.65,
+        "Zone Fill": false,
+        "Zone Bloom": true,
+        "Zone Motion": true
+      }
+    },
+    "AntiKnockback": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Horizontal": 0.0,
+        "Vertical": 0.0,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Backtrack": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Version": "New",
+        "Range Min": 1.0,
+        "Range Max": 3.0,
+        "Delay Min": 280.0,
+        "Delay Max": 480.0,
+        "Next Backtrack Delay Min": 0.0,
+        "Next Backtrack Delay Max": 10.0,
+        "Tracking Buffer": 500.0,
+        "Chance": 50.0,
+        "Pause On Hurt Time": false,
+        "Hurt Time": 3.0,
+        "Target Mode": "Attack",
+        "Time Since Last Attack": 1000.0,
+        "Release Out Of Reach": true,
+        "Release Distance": 6.0,
+        "ESP": "Box",
+        "Color": -1,
+        "Gradient": -6862849,
+        "Ghost Model": true,
+        "Tether": true,
+        "Bloom": true,
+        "Through Walls": true,
+        "New Range Min": 0.0,
+        "New Range Max": 10.0,
+        "New Delay": 15000.0,
+        "Only Attack": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Criticals": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "MiniJump",
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoTotem": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Health",
+        "Health": 10.0,
+        "Include Absorption": false,
+        "Swap Mode": "Direct",
+        "Swap Style": "Legit",
+        "Click Delay": 100.0,
+        "Click Delay Max": 200.0,
+        "Offhand Key": true,
+        "Open Inventory": false,
+        "Delay": 0.0,
+        "Random Delay": 0.0,
+        "Hotbar Refill": false,
+        "Hotbar Reserves": 1.0,
+        "In Inventory": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "HoverTotem": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Hotbar Refill": false,
+        "Hotbar Slot": 1.0,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Mace": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "auto-swap": true,
+        "pick": "Damage",
+        "breach-swap": false,
+        "swap-back": true,
+        "smash-assist": false,
+        "smash-timing": "Delayed",
+        "min-fall": 3.0,
+        "mobs": false,
+        "silent-aim": false,
+        "aim-range": 6.0,
+        "turn-speed": 60.0,
+        "rotation": "Sloth",
+        "lead-turn": true,
+        "stun-slam": "Same Tick",
+        "range-ring": "In Air",
+        "target-mark": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Lunge Swap": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Legit",
+        "Activation Key": 86,
+        "Swap Back": true,
+        "Swap Back To Slot": false,
+        "Swap Back Slot": 1.0,
+        "Hold To Lunge": false,
+        "Charge After Swap": true,
+        "Swap Rule": "Detect",
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Totem Hit": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Switch Delay": 30.0,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Shield Breaker": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Swap Back": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Rod Swap": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Cast Only",
+        "Cast Bind": -1,
+        "Automatic": false,
+        "Attack Held": true,
+        "Range": 6.0,
+        "Cooldown": 750.0,
+        "Timeout": 1000.0,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Reach": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Combat": 3.5,
+        "Block": 4.5,
+        "Mode": "Normal",
+        "OnlySword": false,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "TriggerBot": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Delay": 0.0,
+        "Players Only": false,
+        "Smart Delay": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoClicker": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Activation": "Hold",
+        "Left Click": true,
+        "Right Click": true,
+        "CPS": 10.0,
+        "Right CPS": 10.0,
+        "Randomize CPS": false,
+        "Min CPS": 8.0,
+        "Min Right CPS": 8.0,
+        "Only Weapon": true,
+        "Wait Cooldown": false,
+        "Only Entities": false,
+        "Break Blocks": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoCrystal": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Range": 4.5,
+        "Target Range": 10.0,
+        "Break Delay": 2.0,
+        "Place Delay": 2.0,
+        "Min Damage": 4.0,
+        "Face Place Health": 8.0,
+        "Predict Ticks": 2.0,
+        "Max Self Damage": 6.0,
+        "Anti Self": true,
+        "Players": true,
+        "Mobs": false,
+        "Auto Switch": true,
+        "Pause Using Item": true,
+        "Place": true,
+        "Place Obsidian": true,
+        "Obsidian Mode": "Best",
+        "Obsidian Gain": 3.0,
+        "Obsidian Delay": 1.0,
+        "Break": true,
+        "Rotation": "Visible",
+        "Turn Speed": 45.0,
+        "Aim Hold": 1.0,
+        "Place Range": 4.5,
+        "Break Range": 3.0,
+        "Scan Interval": 2.0,
+        "Response Timeout": 10.0,
+        "Pause Weakness": true,
+        "Pause On Kill": false,
+        "Kill Pause": 10.0,
+        "Work with Crystal": true,
+        "Work with Sword": true,
+        "Work with Totem": true,
+        "Work with Fist": true,
+        "Switch Delay Min": 1.0,
+        "Switch Delay Max": 50.0,
+        "Place Delay Min": 50.0,
+        "Place Delay Max": 100.0,
+        "Break Delay Min": 50.0,
+        "Break Delay Max": 100.0,
+        "Swap Back": true,
+        "Swap Back Delay Min": 50.0,
+        "Swap Back Delay Max": 100.0,
+        "Highlight": true,
+        "Highlight Color Mode": "Theme",
+        "Highlight Color": -1381654,
+        "Highlight Opacity": 0.85,
+        "Highlight Thickness": 0.015,
+        "Highlight Fill": true,
+        "Highlight Fill Opacity": 0.08,
+        "Highlight Glow": 0.65,
+        "Highlight Hold": 0.5,
+        "Highlight Fade": 0.3,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Crystal Optimizer": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AnchorTap": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Delay": 0.0,
+        "Safe Anchor": false,
+        "Air Replace": false,
+        "Range": 4.1,
+        "Rotation": "Visible",
+        "Auto Switch": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoAnchor": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Range": 4.5,
+        "Delay": 0.0,
+        "Auto Switch": true,
+        "Safe Anchor": true,
+        "Shield Block": "Glowstone",
+        "Players": true,
+        "Mobs": false,
+        "Target Range": 8.0,
+        "Min Damage": 6.0,
+        "Anti Self": true,
+        "Max Self Damage": 8.0,
+        "Pause Using Item": true,
+        "Rotation": "Visible",
+        "Highlight": true,
+        "Highlight Color Mode": "Theme",
+        "Highlight Color": -1381654,
+        "Highlight Opacity": 0.85,
+        "Highlight Thickness": 0.015,
+        "Highlight Fill": true,
+        "Highlight Fill Opacity": 0.08,
+        "Highlight Glow": 0.65,
+        "Highlight Hold": 0.5,
+        "Highlight Fade": 0.3,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoCart": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Rotation": "Visible",
+        "Turn Speed": 60.0,
+        "Charge": 20.0,
+        "Range": 4.5,
+        "Players": true,
+        "Mobs": false,
+        "Target Range": 7.0,
+        "Min Damage": 6.0,
+        "Anti Self": true,
+        "Max Self Damage": 10.0,
+        "Highlight": true,
+        "Highlight Color Mode": "Theme",
+        "Highlight Color": -1381654,
+        "Highlight Opacity": 0.85,
+        "Highlight Thickness": 0.015,
+        "Highlight Fill": true,
+        "Highlight Fill Opacity": 0.08,
+        "Highlight Glow": 0.65,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AntiTrap": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Paintings": true,
+        "Item Frames": true,
+        "Minecarts": true,
+        "Falling Blocks": false,
+        "Armor Stands": false,
+        "Banners": false,
+        "Villagers": false,
+        "Horses": false,
+        "Signs": false,
+        "Boats": false,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoWeb": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Range": 4.1,
+        "Target Range": 6.0,
+        "Delay Per Action": 0.0,
+        "Rotation": "Visible",
+        "Auto Switch": true,
+        "Pause Using Item": true,
+        "Pause Mining": true,
+        "Highlight": true,
+        "Highlight Color Mode": "Theme",
+        "Highlight Color": -1381654,
+        "Highlight Opacity": 0.85,
+        "Highlight Thickness": 0.015,
+        "Highlight Fill": true,
+        "Highlight Fill Opacity": 0.08,
+        "Highlight Glow": 0.65,
+        "Legs": true,
+        "Head": true,
+        "Surround": false,
+        "Upper Surround": false,
+        "Web Predict": false,
+        "Predict Ticks": 2.0,
+        "Integrate With Trap": false,
+        "Auto Sign": false,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoTrap": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Range": 4.1,
+        "Target Range": 6.0,
+        "Delay Per Action": 6.0,
+        "Rotation": "Visible",
+        "Auto Switch": true,
+        "Pause Using Item": true,
+        "Pause Mining": true,
+        "Highlight": true,
+        "Highlight Color Mode": "Theme",
+        "Highlight Color": -1381654,
+        "Highlight Opacity": 0.85,
+        "Highlight Thickness": 0.015,
+        "Highlight Fill": true,
+        "Highlight Fill Opacity": 0.08,
+        "Highlight Glow": 0.65,
+        "Highlight Hold": 0.75,
+        "Highlight Fade": 0.35,
+        "Mode": "Legit",
+        "Blocks": "Obsidian",
+        "Only Standing": true,
+        "Trap Mode": "Full",
+        "Trap Predict": false,
+        "Predict Ticks": 2.0,
+        "Predict Sort": true,
+        "Placement Preview": 6.0,
+        "Turn Speed": 180.0,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "IgnoreEntity": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {}
+    },
+    "Aim Assist": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Anubis Range": 4.0,
+        "Anubis FOV": 60.0,
+        "Anubis Speed": 60.0,
+        "Anubis Weapons Only": true,
+        "Anubis Vertical": true,
+        "Require Attack": true,
+        "Weapons Only": true,
+        "Players Only": true,
+        "Vertical Assistance": false,
+        "Range": 3.0,
+        "Aim Cone": 60.0,
+        "Correction Speed": 60.0,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "W Tap": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Players Only": true,
+        "Weapons Only": true,
+        "Release Duration": 1.0,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "Fly": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Speed": 10.0,
+        "Mode": "Glide",
+        "Glide Speed": 0.1
+      }
+    },
+    "Speed": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Speed": 10.0,
+        "Mode": "Vanilla",
+        "Auto Jump": true,
+        "Only On Ground": false,
+        "Damage Boost": false,
+        "Strafe": 0.8,
+        "Smooth Accel": true,
+        "Collision Boost": 0.02,
+        "Collision Limit": 1.0
+      }
+    },
+    "Grim Speed": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Collision Boost": 0.02,
+        "Collision Limit": 1.0,
+        "Sprint Jump": true
+      }
+    },
+    "Target Strafe": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Speed": 1.0,
+        "Radius": 1.0,
+        "Direction": "Clockwise",
+        "Auto Jump": false,
+        "Avoid Edges": true
+      }
+    },
+    "Scaffold": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Auto Switch": true,
+        "Safe Walk": true,
+        "Keep Height": false,
+        "Rotation": "Instant",
+        "Turn Speed": 360.0,
+        "Look Ahead": 0.35,
+        "Range": 4.1,
+        "Delay": 0.0,
+        "Pause Using Item": true,
+        "Pause Mining": true,
+        "Highlight": true,
+        "Highlight Color Mode": "Theme",
+        "Highlight Color": -1381654,
+        "Highlight Opacity": 0.85,
+        "Highlight Thickness": 0.015,
+        "Highlight Fill": true,
+        "Highlight Fill Opacity": 0.08,
+        "Highlight Glow": 0.65
+      }
+    },
+    "Jesus": {
+      "enabled": false,
+      "keybind": 66,
+      "settings": {}
+    },
+    "NoFall": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {}
+    },
+    "NoSlowdown": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Items": true,
+        "Webs": true,
+        "Soul Sand": true
+      }
+    },
+    "No Jump Delay": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Jump Cooldown": 10.0
+      }
+    },
+    "Auto Sprint": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {}
+    },
+    "ElytraFly": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Speed": 1.5,
+        "Mode": "Boost"
+      }
+    },
+    "EntitySpeed": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Speed": 2.0
+      }
+    },
+    "Boat Fly": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Speed": 80.0,
+        "Vertical Speed": 40.0,
+        "Fall Speed": 10.0,
+        "Smoothing": 3.0,
+        "Anti Kick": true
+      }
+    },
+    "AirStuck": {
+      "enabled": false,
+      "keybind": 96,
+      "settings": {}
+    },
+    "ElytraMotion": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Distance": 3.0,
+        "Swap Chestplate": true,
+        "Use Firework": true,
+        "Legit": false
+      }
+    },
+    "ElytraHelper": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Firework Key": -1,
+        "Auto Start": true,
+        "Fast Start": true,
+        "Combat Relaunch": true,
+        "Relaunch Delay": 175.0,
+        "Relaunch Firework": true,
+        "Auto Firework": false,
+        "Delay": 650.0,
+        "Only With Target": false,
+        "Only While Gliding": true
+      }
+    },
+    "Auto Pearl Catch": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Catch Bind": -1,
+        "Direction": "Up",
+        "Timing": "Instant",
+        "Delay": 2.0,
+        "Turn Speed": 90.0,
+        "Swap Back": true
+      }
+    },
+    "Wind Charge Hop": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Hop Bind": -1,
+        "Direction": "Up",
+        "Jump": "With Throw",
+        "Swap Back": true
+      }
+    },
+    "Auto MLG": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Fall Distance": 8.0,
+        "Pick Up": true
+      }
+    },
+    "Fullbright": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Gamma"
+      }
+    },
+    "Zoom": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Zoom Key": 67,
+        "Activation": "Hold",
+        "Magnification": 9.5,
+        "Scroll Zoom": true,
+        "Remember Magnification": false,
+        "Reduce Sensitivity": true,
+        "Smooth Transition": true,
+        "Transition Time": 0.15
+      }
+    },
+    "ESP": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Outline",
+        "Players": true,
+        "Mobs": false,
+        "Animals": false,
+        "Range": 512.0,
+        "Color": "Category",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true,
+        "Fill Opacity": 0.12,
+        "Max Entities": 128.0,
+        "Health Bars": true,
+        "Health Width": 3.0,
+        "Health Text": true,
+        "Notifications": false
+      }
+    },
+    "XRay": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Both",
+        "Range": 32.0,
+        "Color": "Theme",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true,
+        "Fill Opacity": 0.12,
+        "Ore Colors": true,
+        "Labels": true,
+        "Overlay Style": "Box",
+        "Max Ores": 512.0,
+        "Diamond": true,
+        "Emerald": true,
+        "Gold": true,
+        "Iron": true,
+        "Redstone": true,
+        "Lapis": true,
+        "Copper": false,
+        "Coal": false,
+        "Ancient Debris": true,
+        "Quartz": false,
+        "Base Blocks": true
+      }
+    },
+    "No Block Rotation": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {}
+    },
+    "Realistic Water": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Intensity": 100.0,
+        "Waves": 0.0,
+        "World reflections": false,
+        "Foam": false,
+        "Caustics": false,
+        "Underwater": true,
+        "Volumetric": false
+      }
+    },
+    "Waving Foliage": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Leaves": true,
+        "Trees": true,
+        "Plants": true,
+        "Strength": 2.8,
+        "Speed": 3.0,
+        "Gusts": 100.0
+      }
+    },
+    "Wet Ground": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Style": "Flooded",
+        "Puddles": 45.0,
+        "Wetness": 50.0,
+        "Shine": 70.0,
+        "World reflections": true,
+        "Raindrops": true,
+        "Wetter in rain": true
+      }
+    },
+    "Snow Ground": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Coverage": 100.0,
+        "Depth": 75.0,
+        "Sparkle": 30.0,
+        "Snowfall": true,
+        "Density": 85.0,
+        "Wind": 35.0,
+        "Radius": 24.0,
+        "Quality": "High",
+        "Footsteps": true,
+        "Trail Time": 12.0
+      }
+    },
+    "Tracers": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Players": true,
+        "Mobs": false,
+        "Animals": false,
+        "Range": 96.0,
+        "Max Entities": 64.0,
+        "Color": "Theme",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true
+      }
+    },
+    "Nametags": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Players": true,
+        "Self Nametag": false,
+        "Mobs": false,
+        "Animals": false,
+        "Health": true,
+        "Distance": true,
+        "Items": true,
+        "Ping": true,
+        "Range": 128.0,
+        "Scale": 1.0,
+        "Height": 0.25,
+        "Opacity": 0.65,
+        "Background": true
+      }
+    },
+    "NoWeather": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {}
+    },
+    "Chams": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Players": true,
+        "Mobs": false,
+        "Red": 1.0,
+        "Green": 0.3,
+        "Blue": 0.3,
+        "Theme Colors": true,
+        "Range": 128.0,
+        "Visible Opacity": 0.3,
+        "Hidden Opacity": 0.55,
+        "Hidden Color": -1077331,
+        "Through Walls": true,
+        "Outline": false,
+        "Max Entities": 32.0,
+        "Color 1": -16738561,
+        "Color 2": -16111496,
+        "Line Width": 2.0,
+        "Outline Opacity": 1.0,
+        "Fill Opacity": 0.25,
+        "Glow Radius": 12.0,
+        "Glow Intensity": 0.75,
+        "Speed": 0.5,
+        "Gradient Scale": 1.0,
+        "Render Self": false,
+        "Team Colors": false
+      }
+    },
+    "Hand Chams": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Color 1": -16738561,
+        "Color 2": -16111496,
+        "Line Width": 1.0,
+        "Outline Opacity": 1.0,
+        "Fill Opacity": 0.1,
+        "Glow Radius": 12.0,
+        "Glow Intensity": 0.75,
+        "Speed": 0.5,
+        "Gradient Scale": 1.0
+      }
+    },
+    "Crystal Chams": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Model": "Vanilla",
+        "Color mode": "Theme",
+        "Color": -1459895,
+        "Opacity": 100.0,
+        "Glow": true,
+        "Rings": true,
+        "Size": 100.0,
+        "Spin rate": 100.0,
+        "Bounce": 100.0,
+        "Base": "Default"
+      }
+    },
+    "Walk Style": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Style": "Natural",
+        "Strength": 100.0
+      }
+    },
+    "Emotes": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Wheel Key": 66,
+        "Slot 1": "Take the L",
+        "Slot 2": "Floss",
+        "Slot 3": "Maybach Bounce",
+        "Slot 4": "Money Spread",
+        "Third Person": true,
+        "Music Volume": 0.3
+      }
+    },
+    "Pets": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Pet": "Tung Tung Tung Sahur",
+        "Realism": false,
+        "Realistic Pet": "Tung Tung Tung Sahur",
+        "Realistic Size": 1.0,
+        "Size": 0.5,
+        "Position": "Behind",
+        "Sparkle trail": true,
+        "In first person": true,
+        "Speech bubbles": true,
+        "Color mode": "Natural",
+        "Custom color": -1459895,
+        "Dragon finish": "Scales",
+        "Dragon natural colours": false,
+        "Dragon colour": -1459895,
+        "Dragon glow": 50.0,
+        "Dragon glow colour": -1459895,
+        "Jellyfish finish": "Glass",
+        "Jellyfish natural colours": false,
+        "Jellyfish colour": -1459895,
+        "Jellyfish glow": 70.0,
+        "Jellyfish glow colour": -1459895,
+        "Rune Orb finish": "Glass",
+        "Rune Orb natural colours": false,
+        "Rune Orb colour": -1459895,
+        "Rune Orb glow": 70.0,
+        "Rune Orb glow colour": -1459895,
+        "Ghost finish": "Wisp",
+        "Ghost natural colours": false,
+        "Ghost colour": -1459895,
+        "Ghost glow": 50.0,
+        "Ghost glow colour": -1459895
+      }
+    },
+    "Crypto Pets": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Count": 2.0,
+        "Size": 0.8,
+        "Radius": 3.0,
+        "Orbit speed": 3.0,
+        "Sparkle trail": true,
+        "In first person": true,
+        "Bitcoin": true,
+        "Solana": false,
+        "Ethereum": true,
+        "Litecoin": false
+      }
+    },
+    "ItemESP": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Range": 48.0,
+        "Max Items": 128.0,
+        "Mode": "Corners",
+        "XP Orbs": false,
+        "Labels": true,
+        "Color": "Theme",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true,
+        "Fill Opacity": 0.12
+      }
+    },
+    "TimeChanger": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Time": 13500.0
+      }
+    },
+    "Animations": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Swing": "Module 6",
+        "Only with aura": false,
+        "Legacy Strength": 20.0,
+        "Swing Strength": 8.0,
+        "Angle": 100.0,
+        "Turn": 0.0,
+        "Down Strength": 0.0,
+        "Distance": 0.25,
+        "Smooth Motion": true,
+        "Smooth Amount": 0.65,
+        "Motion Curve": 1.0,
+        "Item 360": false,
+        "Spin Axis": "X",
+        "Spin Speed": 3.6,
+        "Slow": false,
+        "Speed": 12.0,
+        "Duration": 1.0,
+        "Strength": 1.0,
+        "Only During Swing": false,
+        "Equip Motion": false,
+        "Animate Offhand": false
+      }
+    },
+    "ViewModel": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Main Scale": 1.0,
+        "Main X": 0.0,
+        "Main Y": 0.0,
+        "Main Z": 0.0,
+        "Main Pitch": 0.0,
+        "Main Yaw": 0.0,
+        "Main Roll": 0.0,
+        "Off Scale": 1.0,
+        "Off X": 0.0,
+        "Off Y": 0.0,
+        "Off Z": 0.0,
+        "Off Pitch": 0.0,
+        "Off Yaw": 0.0,
+        "Off Roll": 0.0
+      }
+    },
+    "Removals": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "hurtCam": true,
+        "scoreboard": false,
+        "bossBar": false,
+        "portal": false,
+        "fire": false,
+        "clip": false,
+        "water": false,
+        "nausea": false,
+        "blindness": false,
+        "darkness": false,
+        "pumpkin": false,
+        "fov": false,
+        "breakParticles": false,
+        "weather": false,
+        "glowing": false,
+        "lava": false,
+        "beacon": false,
+        "weatherSound": false,
+        "phantoms": false,
+        "waterSound": false,
+        "lavaSound": false
+      }
+    },
+    "GUI Animation": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Player List": true,
+        "Inventory": true,
+        "Camera Zoom": true,
+        "Chunk Update": true,
+        "Perspective Change": true,
+        "Chat Messages": true,
+        "Items": true,
+        "Chunk Animation": "Quart",
+        "Speed": 3.0
+      }
+    },
+    "3D UI": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Screens": "Inventory",
+        "Side": "Right",
+        "Menu Angle": 14.0,
+        "Menu Screen Height": 76.0,
+        "Camera Distance": 1.1,
+        "Camera Offset": 0.5,
+        "Camera Height": 0.1,
+        "Camera Pitch": 3.0,
+        "Transition": 320.0,
+        "Dim Background": false,
+        "Show HUD": true,
+        "Player Facing": "Forward",
+        "Player Turn": 180.0
+      }
+    },
+    "World Menu": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Placement": "Pinned",
+        "Close Distance": 15.0,
+        "Menu Height": 50.0,
+        "Panel Size": 1.5
+      }
+    },
+    "Line Glyphs": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Count": 200.0,
+        "Slow Speed": true,
+        "Color": "Theme"
+      }
+    },
+    "Pearl Particles": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Color": -8866817,
+        "Spawn Rate": 10.0,
+        "Size": 0.3,
+        "Lifetime": 0.5,
+        "Spread": 0.2,
+        "Gravity": 0.008,
+        "Fade Speed": 2.0,
+        "Color Animation": false
+      }
+    },
+    "Sky Shader": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Core Caustic",
+        "Speed": 1.2,
+        "Scale": 5.0,
+        "Intensity": 0.01,
+        "Alpha": 1.0,
+        "Theme Color": true,
+        "Custom Color": -1,
+        "Lightning Rate": 1.0
+      }
+    },
+    "Sword Models": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Model": "Butterfly",
+        "Finish": "Ice",
+        "Model Scale": 1.0,
+        "Hand X": 0.0,
+        "Hand Y": 0.0,
+        "Hand Z": 0.0,
+        "Inspect Key": 71,
+        "Inspect Speed": 2.0,
+        "Idle Motion": true,
+        "Enchantment Glint": true,
+        "Reset Defaults": false
+      }
+    },
+    "StorageESP": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Chests": true,
+        "Ender Chests": true,
+        "Shulkers": true,
+        "Barrels": false,
+        "Spawners": true,
+        "Hoppers": false,
+        "Furnaces": false,
+        "Blast Furnaces": false,
+        "Smokers": false,
+        "Dispensers": false,
+        "Droppers": false,
+        "Crafters": false,
+        "Brewing Stands": false,
+        "Beehives": false,
+        "Decorated Pots": false,
+        "Chiseled Bookshelves": false,
+        "Jukeboxes": false,
+        "Range": 64.0,
+        "Max Blocks": 256.0,
+        "Mode": "Filled",
+        "Labels": true,
+        "Label Range": 128.0,
+        "Max Labels": 64.0,
+        "Label Scale": 1.0,
+        "Label Icons": true,
+        "Hide Overlaps": true,
+        "Boxes": true,
+        "Tracers": false,
+        "Tracer Origin": "Crosshair",
+        "Tracer Range": 64.0,
+        "Max Tracers": 64.0,
+        "Color": "Theme",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true,
+        "Fill Opacity": 0.12
+      }
+    },
+    "Player Trail": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Style": "Comet",
+        "Alpha Curve": "LINEAR",
+        "Width Curve": "TAPER_TAIL",
+        "Snapshot Interval": 1.2,
+        "Ghost Lifetime": 2.4,
+        "Maximum Ghosts": 6.0,
+        "Ghost Opacity": 0.45,
+        "Ghost Style": "Original",
+        "Ghost Fade": "Smooth",
+        "Player": false,
+        "Entities": true,
+        "Projectiles": true,
+        "Full Body": true,
+        "Width": 0.12,
+        "Lifetime": 1.2,
+        "Bloom": true,
+        "Smoothing": true,
+        "Color": -1381654,
+        "Gradient": -6250336,
+        "Trail Particles": true,
+        "Particle Density": 1.0
+      }
+    },
+    "HitFX": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Preset": "Clean",
+        "Screen Impact": false,
+        "Ring Thickness": 0.045,
+        "Particle Type": "Star",
+        "Amount": 18.0,
+        "Size": 0.08,
+        "Lifetime": 0.8,
+        "Maximum": 1000.0,
+        "Distance": 64.0,
+        "Theme Colors": true,
+        "Color": -1381654,
+        "Gradient": -6250336,
+        "Bloom": true,
+        "Particles": true,
+        "Hit Rings": true,
+        "Ring Size": 0.8,
+        "Ring Speed": 1.0,
+        "Entity Hit Color": false,
+        "Hit Trails": true,
+        "Ring Fade": 0.7,
+        "Bloom Count": 15.0,
+        "Bloom Size": 0.25,
+        "Bloom Lifetime": 1.5,
+        "Bloom Spread": 0.08,
+        "Bloom Gravity": 0.015,
+        "Bloom Fade Speed": 1.0,
+        "Bloom Color Animation": false
+      }
+    },
+    "KillFX": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Style": "Star of David",
+        "Colors": "Theme",
+        "Primary Color": -10101505,
+        "Secondary Color": -32547,
+        "Bloom": true,
+        "Sound": true,
+        "Volume": 0.55,
+        "Render Distance": 48.0
+      }
+    },
+    "Halloween": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Intensity": "Cinematic",
+        "Harvest Moon": true,
+        "Cinderfall": true,
+        "Haunted Combat": true,
+        "Soul Harvest": true,
+        "After Dark Menu": true
+      }
+    },
+    "Item Physic": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Physics": "Normal"
+      }
+    },
+    "Damage Markers": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Size": 1.0,
+        "Life Time": 1000.0,
+        "Self Damage": true,
+        "Friend Hits": true,
+        "Color": "Damage",
+        "Custom Color": -48060
+      }
+    },
+    "WorldLyrics": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Style": "Dreamy",
+        "Motion": "Wave",
+        "Density": 4.0,
+        "Size": 0.5,
+        "Color": -16776961,
+        "Gradient": true,
+        "Glow": true,
+        "Through Walls": false
+      }
+    },
+    "Island Lyrics": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {}
+    },
+    "EchoHand": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Flame",
+        "Echo Trail": true,
+        "Strength": 0.75,
+        "Radius": 11.0,
+        "Trail": 0.84,
+        "Lag": 1.15,
+        "Color": -924394030,
+        "Outside Only": true,
+        "Flame Color": "Custom",
+        "Flame Color Value": -419430401,
+        "Flame Strength": 0.85,
+        "Rise Speed": 0.0,
+        "Wobble": 0.65,
+        "Length": 0.95,
+        "Flame Brightness": 0.9,
+        "Width": 1.0,
+        "Fire": 1.0,
+        "Turbulence": 1.0,
+        "Only Items": false
+      }
+    },
+    "Flame Hands": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Hands": "Both",
+        "Render Mode": "Bloom",
+        "Color Mode": "Static",
+        "Primary Color": -45036,
+        "Secondary Color": -14336,
+        "Size": 0.25,
+        "Density": 100.0,
+        "Lifetime": 0.35,
+        "Buoyancy": 0.5,
+        "Turbulence": 0.3,
+        "Inertia Lag": 0.5,
+        "Only When Holding": false
+      }
+    },
+    "Hit Sounds": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Sound": "Attack Weak",
+        "Volume": 1.0,
+        "Pitch": 1.0,
+        "Mob Sounds": true,
+        "Mute normal hit sounds": true,
+        "Pitch Random": 0.0,
+        "Only Players": false,
+        "Only Crit": false,
+        "Random Sound": false,
+        "Second Sound": "None"
+      }
+    },
+    "Player Model": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Scale": 2.0,
+        "Show Timing": false
+      }
+    },
+    "Skin Changer": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Skin": "char.png",
+        "Model": "Slim",
+        "Copy Player": ""
+      }
+    },
+    "Capes": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Cape": "MineCon 2011"
+      }
+    },
+    "JumpFX": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Star of David",
+        "Trigger": "Land",
+        "Maximum Radius": 1.0,
+        "Pulse Duration": 1.0,
+        "Wave Width": 0.9,
+        "Outline Thickness": 0.04,
+        "Color Theme": "Custom",
+        "Color": -15204097,
+        "Opacity": 0.35,
+        "Glow Intensity": 2.0,
+        "Circle Colour": -9452545,
+        "Circle Colour 2": -3703297,
+        "Circle Size": 1.6,
+        "Circle Duration": 0.9,
+        "Circle Through Walls": false,
+        "Radius": 0.6,
+        "Points": 16.0,
+        "Only Sprinting": false
+      }
+    },
+    "Block Overlay": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Transition": 240.0,
+        "Color Mode": "Theme",
+        "Color": -1381654,
+        "Outline Opacity": 0.85,
+        "Outline Thickness": 0.015,
+        "Fill": true,
+        "Fill Opacity": 0.15,
+        "Glow": 1.5
+      }
+    },
+    "TargetAura": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Style": "Energy",
+        "Source": "Auto",
+        "Speed": 0.65,
+        "Width": 0.045,
+        "Particles Per Second": 18.0,
+        "Bloom": true,
+        "Theme Colors": true,
+        "Color": -1381654,
+        "Gradient": -6250336
+      }
+    },
+    "SelfVisuals": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Style": "Comets",
+        "Rainbow Speed": 0.18,
+        "Direction": "Downward",
+        "Gradient Scale": 0.5,
+        "Saturation": 0.62,
+        "Brightness": 0.95,
+        "Model Opacity": 1.0,
+        "Outline": true,
+        "Outline Color": -1,
+        "Outline Thickness": 1.5,
+        "Outline Opacity": 0.7,
+        "Outline Bloom": false,
+        "Model Bloom": false,
+        "Affect Cape": false,
+        "Comet Size": 0.055,
+        "Orbit Speed": 0.32,
+        "Orbit Radius": 0.52,
+        "Trail Length": 0.24,
+        "Glow Intensity": 1.0,
+        "Comet Bloom": true,
+        "Theme Colors": true,
+        "Comet Color": -1381654,
+        "Tail Color": -6250336,
+        "Glass Opacity": 0.62,
+        "Refraction Strength": 3.5,
+        "Surface Flow": 0.65,
+        "Gloss": 0.78,
+        "Edge Highlight": 0.8,
+        "Iridescence": 0.18,
+        "Enhanced Refraction": true,
+        "Theme Palette": false,
+        "Primary Color": -15814,
+        "Secondary Color": -14018044,
+        "Shading": 0.6,
+        "Pattern Scale": 1.0,
+        "Pattern Speed": 0.25,
+        "Affect Armor": false,
+        "Affect Held Items": false,
+        "First Person Arms": false,
+        "Third Person": true
+      }
+    },
+    "WorldColor": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Saturation": 1.0,
+        "Contrast": 1.0,
+        "Exposure": 0.0,
+        "Gamma": 1.0,
+        "Tint": -1,
+        "Shadow Tint": -1,
+        "Highlight Tint": -1,
+        "Vignette": 0.0,
+        "Ambient Color": -5342721,
+        "Ambient Strength": 0.95
+      }
+    },
+    "Motion Blur": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Smooth",
+        "Strength": 0.1,
+        "Quality": "Medium",
+        "Max Length": 12.0
+      }
+    },
+    "Ambient Particles": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Style": "Both",
+        "Radius": 12.0,
+        "Height": 10.0,
+        "Density": 160.0,
+        "Lifetime": 5.0,
+        "Speed": 1.5,
+        "Vertical Travel": 3.0,
+        "Sideways Travel": 2.5,
+        "Motion Period": 5.0,
+        "Maximum Particles": 1536.0,
+        "Size": 0.05,
+        "Comet Count": 12.0,
+        "Trail Length": 0.8,
+        "Trail Width": 0.025,
+        "Theme Colors": true,
+        "Color": -1517057,
+        "Tail Color": -6794006,
+        "Opacity": 0.7,
+        "Bloom": true
+      }
+    },
+    "Astral Weapon Trails": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Style": "Astral",
+        "Trail Duration": 0.28,
+        "Width": 0.65,
+        "Intensity": 1.0,
+        "Theme Colors": true,
+        "Primary Color": -8790017,
+        "Secondary Color": -9142785,
+        "Bloom": true,
+        "Sparks": true,
+        "First Person": true,
+        "Motion Smoothing": true
+      }
+    },
+    "Celestial Weather": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Style": "Stardust",
+        "Density": 0.8,
+        "Speed": 1.2,
+        "Size": 2.5,
+        "Theme Colors": true,
+        "Color": -2561281,
+        "Secondary Color": -6059009,
+        "Bloom": true,
+        "Radius": 48.0,
+        "Wind Strength": 0.8,
+        "Surface Impacts": true,
+        "Render Distance": 80.0,
+        "Dimension Filter": "Overworld",
+        "Indoors": "Fade"
+      }
+    },
+    "TargetHUD": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Equipment Pos": "Above",
+        "Health Bar": "Below",
+        "Hands items": "Right"
+      }
+    },
+    "Staff List": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Player Heads": true,
+        "Alerts": true,
+        "Staff Names": ""
+      }
+    },
+    "CustomCrosshair": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Style": "Star of David",
+        "Drawing": "000000000000080010002000000eb8000002000400080000000000000",
+        "Size": 7.0,
+        "Thickness": 1.0,
+        "Theme Color": true,
+        "Color": -16737281,
+        "Outline": false,
+        "Spin": true,
+        "Spin Speed": 180.0,
+        "Click Spin": false,
+        "Click Spin Time": 350.0
+      }
+    },
+    "Click Pulse": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Trigger": "Both",
+        "Size": 14.0,
+        "Duration": 350.0,
+        "Thickness": 2.0,
+        "Theme Color": true,
+        "Color": -1
+      }
+    },
+    "Freelook": {
+      "enabled": false,
+      "keybind": 89,
+      "settings": {
+        "Distance": 4.0,
+        "Activation": "Toggle"
+      }
+    },
+    "HUD": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "HUD Font": "Inter",
+        "Staff Names": "",
+        "Watermark": true,
+        "Module List": true,
+        "Info Panel": true,
+        "Keybinds": true,
+        "Potions": true,
+        "Armor": true,
+        "Speed": true,
+        "Inventory": true,
+        "Cooldowns": true,
+        "Radar": true,
+        "Keystrokes": false,
+        "Music Bar": false,
+        "Watermark User": true,
+        "Watermark IP": true,
+        "Watermark FPS": true,
+        "Watermark Time": true,
+        "Watermark Logo Side": "Left",
+        "Keybind Display": "Always",
+        "Cooldown Items": "Combat",
+        "Inventory Header": true,
+        "Radar Range": 47.0,
+        "Radar Mobs": false,
+        "Keystrokes Mouse": true,
+        "Keystrokes Space": true,
+        "Keystrokes CPS": true,
+        "Keystrokes Arrows": false,
+        "Keystrokes Padding": 5.0,
+        "Keystrokes BG Alpha": 150.0,
+        "Keystrokes Shadow": true,
+        "Music Layout": "Bottom",
+        "Music Progress": true,
+        "Music Time": true,
+        "Armor Layout": "Horizontal",
+        "Armor Spacing": 5.0,
+        "Armor Durability": "Percent",
+        "Armor Bars": true,
+        "Armor Background": false,
+        "Armor Empty Slots": true,
+        "Armor Reverse": false,
+        "Armor Held Items": false,
+        "Speed Header": -1291845632,
+        "Speed Background": -1291845632,
+        "Speed Line": -1841171,
+        "Blur Panels": false,
+        "Light Sweep": true
+      }
+    },
+    "CustomSky": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Sky Style": "Nebula",
+        "Animation Speed": 0.5,
+        "Stars": true,
+        "Star Brightness": 0.65,
+        "Clouds": false,
+        "Match Fog": true,
+        "Fog Distance": 1.0,
+        "Nebula Brightness": 1.0,
+        "Nebula Saturation": 0.9,
+        "Nebula Intensity": 0.85,
+        "Nebula Animation Speed": 1.0,
+        "Nebula Motion": "Flow",
+        "Nebula Flow Strength": 0.35,
+        "Nebula Scale": 1.0,
+        "Nebula Color": -1,
+        "Star Density": 0.45,
+        "Nebula Rotation Speed": 0.02,
+        "Show Vanilla Sun": false,
+        "Show Vanilla Moon": false,
+        "Horizon Blend": true,
+        "Exposure": 1.0,
+        "Rotation Speed": 0.02,
+        "Sky Quality": "High",
+        "Caustic Scale": 5.0,
+        "Caustic Intensity": 0.65,
+        "Caustic Distortion": 0.8,
+        "Ocean Base Color": -16635057,
+        "Ocean Highlight Color": -12133155
+      }
+    },
+    "Stretched Res": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Stretch": 1.34
+      }
+    },
+    "China Hat": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Cone",
+        "Kippah Color": -15258800,
+        "Star Color": -7517,
+        "Kippah Size": 0.22,
+        "Kippah Height": 0.08,
+        "Kippah Offset": 0.005,
+        "Accessory Size": 1.0,
+        "Accessory Opacity": 1.0,
+        "Self": true,
+        "Other Players": false,
+        "Theme Colors": true,
+        "Top Color": -3429889,
+        "Rim Color": -8890948,
+        "Radius": 0.6,
+        "Height": 0.3,
+        "Offset": 0.04,
+        "Opacity": 1.0,
+        "Outline": true,
+        "Horn Color": -61184,
+        "Horn Theme": false,
+        "Fire Color": -42752,
+        "Fire Core Color": -2304,
+        "Fire Theme": false,
+        "Fire Size": 1.0,
+        "Fire Heat": 1.0
+      }
+    },
+    "Wings": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Self": true,
+        "Friends": true,
+        "Others": false,
+        "Size": 1.0,
+        "Custom Colors": true,
+        "Color 1": -52586,
+        "Color 2": -13461761,
+        "Style": "Luminous",
+        "Dragon Color": -1
+      }
+    },
+    "Headless Korblox": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Self": true,
+        "Other Players": false,
+        "Headless": true,
+        "Hide Helmets": true,
+        "Korblox": true,
+        "Leg": "Right",
+        "Length": 1.0,
+        "Thickness": 1.0,
+        "Hip Color": -14935272,
+        "Tip Color": -10178636,
+        "Tip Glow": 0.3
+      }
+    },
+    "LARP": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Share Appearance": false,
+        "Receive Cosmetics": true
+      }
+    },
+    "Name Changer": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Name": ""
+      }
+    },
+    "Performance": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Chunk Updates": "Unchanged",
+        "Streaming FPS Limit": false,
+        "Streaming FPS": 120.0
+      }
+    },
+    "AutoTool": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Switch Back": true,
+        "Protect Tools": true
+      }
+    },
+    "Prime Chunk Finder": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Scan Radius": 8.0,
+        "Tracers": true,
+        "Labels": true,
+        "Notifications": true,
+        "Chat Alerts": true,
+        "Color": "Theme",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true,
+        "Fill Opacity": 0.12
+      }
+    },
+    "Freecam": {
+      "enabled": false,
+      "keybind": 342,
+      "settings": {
+        "Speed": 2.6,
+        "Vertical": 1.0,
+        "Smooth": true,
+        "Body": true,
+        "Hands": true,
+        "Keys Move Body": false,
+        "Keep Walking": true,
+        "Scroll Speed": true,
+        "Reset Scroll Speed": true,
+        "Chunks": 12.0,
+        "Activation": "Toggle"
+      }
+    },
+    "SmoothCamera": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Mode": "Default",
+        "Enable First POV": false,
+        "Reset On Perspective": true,
+        "Horizontal Factor": 0.9,
+        "Vertical Factor": 0.93,
+        "Smooth Horizontal Speed": 2.2,
+        "Smooth Vertical Speed": 1.4
+      }
+    },
+    "Fake Lag": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Delay": 200.0,
+        "Grim Compatibility": false,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoArmor": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Diamond": true,
+        "Netherite": true,
+        "Gold": true,
+        "Iron": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "AutoEat": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Hunger": 14.0
+      }
+    },
+    "ChestStealer": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Delay": 2.0
+      }
+    },
+    "AutoRespawn": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {}
+    },
+    "AutoDisconnect": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Health": 4.0
+      }
+    },
+    "InvCleaner": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Dirt": true,
+        "Cobble": true,
+        "Gravel": true,
+        "Seeds": true,
+        "Rotten Flesh": true
+      }
+    },
+    "MCFriend": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {}
+    },
+    "AutoGap": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Health": 14.0,
+        "Golden Apple": true,
+        "Enchanted": true,
+        "Keybind Mode": "Toggle"
+      }
+    },
+    "No Break Delay": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {}
+    },
+    "Fast Use": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Use Interval": 1.0,
+        "Blocks": true,
+        "Projectiles": true,
+        "Other Items": true
+      }
+    },
+    "Auto Drain": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Range": 4.5,
+        "Delay": 2.0,
+        "Waterlogged": false,
+        "Ignore My Water": true
+      }
+    },
+    "SusChunkFinder": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Scan Radius": 4.0,
+        "Sections Per Tick": 2.0,
+        "Rescan Seconds": 2.0,
+        "Marker Y": 64.0,
+        "Max Markers": 64.0,
+        "Marker Style": "Filled",
+        "Labels": true,
+        "Tracers": false,
+        "Notifications": true,
+        "Chat Alerts": true,
+        "Alert Sound": false,
+        "Color": "Theme",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true,
+        "Fill Opacity": 0.12,
+        "Max Scan Y": 48.0,
+        "Min Mature Clusters": 8.0,
+        "Min Mature Percent": 80.0,
+        "Sensitivity": 3.0,
+        "Min Scan Y": -64.0,
+        "Amethyst Light": true,
+        "Kelp": true,
+        "Bamboo": true,
+        "Berries": true,
+        "Vines": true,
+        "Dripstone": true,
+        "Smart Mode": true,
+        "Merge Radius": 1.0,
+        "Centroid Marker": true
+      }
+    },
+    "SpawnerFinder": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Scan Radius": 4.0,
+        "Sections Per Tick": 2.0,
+        "Rescan Seconds": 2.0,
+        "Marker Y": 64.0,
+        "Max Markers": 64.0,
+        "Marker Style": "Filled",
+        "Labels": true,
+        "Tracers": false,
+        "Notifications": true,
+        "Chat Alerts": true,
+        "Alert Sound": false,
+        "Color": "Theme",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true,
+        "Fill Opacity": 0.12,
+        "Trial Spawners": false,
+        "Spawner Boxes": true,
+        "Spawner Labels": true,
+        "Range Rings": true,
+        "Spawner Tracers": false
+      }
+    },
+    "Base Finder": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Scan Radius": 4.0,
+        "Sections Per Tick": 2.0,
+        "Rescan Seconds": 2.0,
+        "Marker Y": 64.0,
+        "Max Markers": 64.0,
+        "Marker Style": "Filled",
+        "Labels": true,
+        "Tracers": false,
+        "Notifications": true,
+        "Chat Alerts": true,
+        "Alert Sound": false,
+        "Color": "Theme",
+        "Custom Color": -4291585,
+        "Line Width": 1.5,
+        "Through Walls": true,
+        "Fill Opacity": 0.12,
+        "Detection": "Balanced",
+        "Min Storage": 4.0,
+        "Min Utilities": 2.0,
+        "Min Ender Chests": 1.0,
+        "Min Scan Y": -64.0,
+        "Max Scan Y": 60.0,
+        "Terrain Clues": true,
+        "Base Boxes": true,
+        "Base Style": "Box",
+        "Visibility Diagnostic": false,
+        "Honey Clues": true
+      }
+    },
+    "Auto Sell": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Menu Title": "Sell",
+        "Min Cycle Delay": 1.0,
+        "Max Cycle Delay": 3.0,
+        "Min Click Delay": 1.0,
+        "Max Click Delay": 3.0,
+        "Menu Open Wait": 3.0,
+        "Randomize Delays": true,
+        "Show Messages": true,
+        "Show Stats": true,
+        "Background Mode": true,
+        "Item Mode": "Selected items",
+        "Protect Hotbar": true,
+        "Protect Named Items": true,
+        "Protect Enchanted Items": true,
+        "Protect Filled Containers": true,
+        "Selection Version": "1",
+        "Selection Error": "",
+        "Selected Item 1": "",
+        "Excluded Item 1": "",
+        "Selected Item 2": "",
+        "Excluded Item 2": "",
+        "Selected Item 3": "",
+        "Excluded Item 3": "",
+        "Selected Item 4": "",
+        "Excluded Item 4": "",
+        "Selected Item 5": "",
+        "Excluded Item 5": "",
+        "Selected Item 6": "",
+        "Excluded Item 6": "",
+        "Selected Item 7": "",
+        "Excluded Item 7": "",
+        "Selected Item 8": "",
+        "Excluded Item 8": "",
+        "Selected Item 9": "",
+        "Excluded Item 9": "",
+        "Selected Item 10": "",
+        "Excluded Item 10": "",
+        "Selected Item 11": "",
+        "Excluded Item 11": "",
+        "Selected Item 12": "",
+        "Excluded Item 12": "",
+        "Selected Item 13": "",
+        "Excluded Item 13": "",
+        "Selected Item 14": "",
+        "Excluded Item 14": "",
+        "Selected Item 15": "",
+        "Excluded Item 15": "",
+        "Selected Item 16": "",
+        "Excluded Item 16": "",
+        "Selected Item 17": "",
+        "Excluded Item 17": "",
+        "Selected Item 18": "",
+        "Excluded Item 18": "",
+        "Selected Item 19": "",
+        "Excluded Item 19": "",
+        "Selected Item 20": "",
+        "Excluded Item 20": "",
+        "Selected Item 21": "",
+        "Excluded Item 21": "",
+        "Selected Item 22": "",
+        "Excluded Item 22": "",
+        "Selected Item 23": "",
+        "Excluded Item 23": "",
+        "Selected Item 24": "",
+        "Excluded Item 24": "",
+        "Selected Item 25": "",
+        "Excluded Item 25": "",
+        "Selected Item 26": "",
+        "Excluded Item 26": "",
+        "Selected Item 27": "",
+        "Excluded Item 27": "",
+        "Selected Item 28": "",
+        "Excluded Item 28": "",
+        "Selected Item 29": "",
+        "Excluded Item 29": "",
+        "Selected Item 30": "",
+        "Excluded Item 30": "",
+        "Selected Item 31": "",
+        "Excluded Item 31": "",
+        "Selected Item 32": "",
+        "Excluded Item 32": ""
+      }
+    },
+    "Home Macro": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Home Slot": 1.0,
+        "Chat Feedback": true
+      }
+    },
+    "Light Debug": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Max Y": -50.0,
+        "Chunk Radius": 8.0,
+        "Alpha": 160.0,
+        "Render Limit": 16384.0
+      }
+    },
+    "Motion Scanner": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Opacity": 140.0,
+        "Sensitivity": 1.0,
+        "HUD Notification": true,
+        "Sound Notification": true,
+        "Chat Notifications": true,
+        "Show Coords": true,
+        "Show Tracers": false,
+        "Tracers Alpha": 70.0,
+        "Highlight Color": -14122241
+      }
+    },
+    "Holes ESP": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Opacity": 60.0,
+        "1x1 Color": -6283024,
+        "3x1 Color": -12058494,
+        "Marker Limit": 4096.0
+      }
+    },
+    "Air Place": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Legit": false,
+        "Range": 4.5,
+        "Delay": 4.0
+      }
+    },
+    "Auto Farm": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Legit": false,
+        "Range": 4.0
+      }
+    },
+    "Auto Tunnel": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Legit": false,
+        "Width": "1x2",
+        "Reach": 4.0,
+        "Base finder": false,
+        "Hazard scan": 6.0,
+        "Avoid lava": true,
+        "Avoid water": true,
+        "Avoid drops": true,
+        "Avoid gravel": false,
+        "Detour": 4.0,
+        "Storage Chests": true,
+        "Storage Barrels": true,
+        "Storage Ender Chests": true,
+        "Storage Hoppers": true,
+        "Storage Spawners": true,
+        "Storage Shulker Boxes": true,
+        "Blocks to flag": 5.0,
+        "Skip dungeons": true,
+        "Ignore near start": 48.0,
+        "On find": "Notify and stop",
+        "Log finds": true,
+        "Save tool at": 30.0,
+        "Stop at health": 8.0
+      }
+    },
+    "FakePay": {
+      "enabled": true,
+      "keybind": -1,
+      "settings": {
+        "Spoof Money": false,
+        "Fake Balance": 1000000.0,
+        "Balance Billions": 0.0,
+        "Deduct Payments": true,
+        "Action Bar": true,
+        "Sound": true,
+        "Hide Errors": false
+      }
+    },
+    "Fake Spawner": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Preview Count": 1.0,
+        "Enchant Glint": false
+      }
+    },
+    "Spin Bot": {
+      "enabled": false,
+      "keybind": -1,
+      "settings": {
+        "Speed": 480.0,
+        "Direction": "Counterclockwise",
+        "Keybind Mode": "Toggle"
+      }
+    }
+  }
+}
