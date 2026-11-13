@@ -33,13 +33,15 @@
 
 ## Schizocraft — отдельный ресурспак 1.16.5
 
-**[Скачать Schizocraft Resourcepack ZIP, около 81 МБ](https://github.com/sunakle/larp-client/raw/refs/heads/main/downloads/resourcepacks/Schizocraft-Resourcepack-1.16.5.zip)**
+**[Скачать Schizocraft Resourcepack ZIP, около 12,5 МБ](https://github.com/sunakle/larp-client/raw/refs/heads/main/downloads/resourcepacks/Schizocraft-Resourcepack-1.16.5.zip)**
 
-В одном ZIP объединены 4 538 ресурсов из Schizocraft 1.3b War and McNutt: модели, текстуры мобов, предметов и блоков, небо, броня, интерфейс, картины, звуки и эффекты. 728 точных дублей устранены. Файлы assets и pack.mcmeta лежат в корне: это один ресурспак, без вложенных ZIP.
+В одном ZIP оставлены 3 167 ресурсов из Schizocraft 1.3b War and McNutt: JSON-модели и состояния блоков, текстуры мобов/сущностей, предметов и блоков, картины и прочие ресурсы. Четыре исходных JSON-цепочки постобработки также сохранены. Файлы assets и pack.mcmeta лежат в корне ZIP.
 
-Это пакет в исходном формате **Minecraft 1.16.5**, без адаптации для LARP 1.21.11. Для использования в 1.16.5 положите ZIP в resourcepacks и включите его в настройках. Для новых объектов и особого неба Schizocraft нужен исходный Forge-мод; ресурспак не содержит Java-кода. Шейдерная часть — четыре JSON-эффекта постобработки, не отдельный shaderpack Iris/OptiFine.
+По запросу удалены **небо и погода, интерфейс и тексты, броня, звуки, частицы и наложения эффектов** — категории 06_Sky, 07_Interface, 08_Armor, 09_Sounds и 10_Particles_Effects в обеих группах, Minecraft и Schizocraft. Исключён 1 371 ресурс, включая их копии в зависимостях моделей. Установка исходного мода по-прежнему добавляет его собственные ресурсы из JAR: удаление из этого ZIP не отключает их в моде.
 
-[Подробная инструкция](docs/resourcepacks/Schizocraft-1.16.5.txt) · [Проверка архива и SHA-256](docs/resourcepacks/Schizocraft-1.16.5-verification.json). Архив и соответствие исходным ресурсам проверены; запуск игры с объединённым ZIP не проверялся.
+Это пакет в исходном формате **Minecraft 1.16.5**, без адаптации для LARP 1.21.11. Положите ZIP в resourcepacks Minecraft 1.16.5 и включите его в настройках. Для новых объектов нужен исходный Forge-мод Schizocraft; Java-код в пакет не включён. Цепочки постобработки не являются самостоятельным shaderpack Iris/OptiFine.
+
+[Подробная инструкция](docs/resourcepacks/Schizocraft-1.16.5.txt) · [Проверка архива и SHA-256](docs/resourcepacks/Schizocraft-1.16.5-verification.json). Архив, оставшиеся контрольные суммы и отсутствие удалённых файлов проверены. Ссылок из оставшихся JSON-моделей на удалённые текстуры не найдено; запуск игры с этим ZIP не проверялся.
 
 ## Состав
 
