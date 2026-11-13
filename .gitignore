@@ -1,0 +1,7 @@
+backups/
+logs/
+game/
+runtime/
+client-settings.json
+*.build.log
+*.build-errors.log
